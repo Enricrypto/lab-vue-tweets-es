@@ -1,11 +1,21 @@
 <template>
     <div class="app">
-        <Tweet />
+        <Tweet :image="tweets[0].user.image" :name="tweets[0].user.name" :handle="tweets[0].user.handle"
+        :message="tweets[0].message" :timestamp="tweets[0].timestamp"
+        />  
+        <Tweet :image="tweets[1].user.image" :name="tweets[1].user.name" :handle="tweets[1].user.handle"
+        :message="tweets[1].message" :timestamp="tweets[1].timestamp"
+        />  
+        <Tweet :image="tweets[2].user.image" :name="tweets[2].user.name" :handle="tweets[2].user.handle"
+        :message="tweets[2].message" :timestamp="tweets[2].timestamp"
+        />  
     </div>
+
 </template>
   
 <script setup>
 import Tweet from './components/Tweet.vue';
+
 const tweets = [
     {
         user: {
@@ -35,6 +45,8 @@ const tweets = [
         message: "here is what. i plan to accomplish today: \n\n2. bark loudly. but at nothing \n7. lose my ball under the couch\n7b. politely ask the human. to get my ball\n3. immediately lose it again. under the same couch\n4. big nap. you have worked hard\n2. repeat",
     },
 ]
+
+
 </script>
   
 <style>
